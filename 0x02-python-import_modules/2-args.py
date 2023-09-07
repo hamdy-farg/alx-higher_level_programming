@@ -1,17 +1,13 @@
 #!/usr/bin/python3
-import sys
-
-def getArg():
-    n_arg = len(argv)- 1
-    end = "."
-    if (n_arg > 0) : end = ":"
-
-    print(f"{n_arg} arguments{end}")
-
-    if(n_arg > 0):
-        for i in range(n_arg):
-            print(f"{i + 1}: {argv[i + 1]}")
-
-if __name__ == "__main__" :
-   argv = sys.argv
-getArg()
+if __name__ == "__main__":
+    import sys
+    argc = len(sys.argv) - 1
+    if (argc == 0):
+        print(argc, "arguments.")
+    elif (argc == 1):
+        print(argc, "argument:".format(sys.argv[0]))
+        print("1:", sys.argv[1])
+    else:
+        print(argc, "arguments:")
+        for i in range(1, argc + 1):
+            print("{}: {}".format(i, sys.argv[i]))
