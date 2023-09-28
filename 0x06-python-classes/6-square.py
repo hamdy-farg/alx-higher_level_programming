@@ -5,7 +5,7 @@ class Square:
     """ square class """
     def __init__(self, size=0, position= (0, 0)):
         """ small intialization """
-        if  (len(position) != 2):
+        if  (len(position) != 2 or not all(isinstance(x, int) and x >= 0 for x in position)):
             raise TypeError ("position must be a tuple of 2 positive integers")
         self.__position = position
         if (type (size)!= int):
@@ -54,6 +54,6 @@ class Square:
     @position.setter
     def position(self, value):
         """ position func """
-        if  (len(value) != 2) :
+        if  (len(value) != 2 or not all(isinstance(x, int) and x >= 0 for x in value)) :
             raise TypeError ("position must be a tuple of 2 positive integers")
-        self.__position = position
+        self.__position = value
