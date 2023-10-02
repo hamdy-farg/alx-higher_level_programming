@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 ''' this Rectangle class '''
 class Rectangle:
     ''' implementation for this '''
