@@ -1,4 +1,4 @@
-test#!/usr/bin/node
+#!/usr/bin/node
 const numb = process.argv[2];
 
 function factorial (numb) {
