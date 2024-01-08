@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-curl -s "$1" | grep -l "Allow:"| awk '{print }'
+# to give me the allowed option
+curl -sI "$1" | grep  "Allow: " | cut -d" " -f 2-
